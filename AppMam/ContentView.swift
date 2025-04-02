@@ -9,15 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .font(.custom("LuckiestGuy-Regular", size: 54))
-        }
-        .padding()
-    }
+        Nivel1View()    }
 }
 
 #Preview {
