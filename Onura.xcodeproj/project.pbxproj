@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5FC71BCA2D92575400EC2EAE /* AppMam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC71BCA2D92575400EC2EAE /* Onura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5FC71BF12D925F1700EC2EAE /* Exceptions for "AppMam" folder in "AppMam" target */ = {
+		5FC71BF12D925F1700EC2EAE /* Exceptions for "AppMam" folder in "Onura" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 5FC71BC92D92575400EC2EAE /* AppMam */;
+			target = 5FC71BC92D92575400EC2EAE /* Onura */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -24,7 +24,7 @@
 		5FC71BCC2D92575400EC2EAE /* AppMam */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				5FC71BF12D925F1700EC2EAE /* Exceptions for "AppMam" folder in "AppMam" target */,
+				5FC71BF12D925F1700EC2EAE /* Exceptions for "AppMam" folder in "Onura" target */,
 			);
 			path = AppMam;
 			sourceTree = "<group>";
@@ -59,7 +59,7 @@
 		5FC71BCB2D92575400EC2EAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FC71BCA2D92575400EC2EAE /* AppMam.app */,
+				5FC71BCA2D92575400EC2EAE /* Onura.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5FC71BC92D92575400EC2EAE /* AppMam */ = {
+		5FC71BC92D92575400EC2EAE /* Onura */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FC71BD82D92575600EC2EAE /* Build configuration list for PBXNativeTarget "AppMam" */;
+			buildConfigurationList = 5FC71BD82D92575600EC2EAE /* Build configuration list for PBXNativeTarget "Onura" */;
 			buildPhases = (
 				5FC71BC62D92575400EC2EAE /* Sources */,
 				5FC71BC72D92575400EC2EAE /* Frameworks */,
@@ -83,11 +83,11 @@
 				5FC71BCC2D92575400EC2EAE /* AppMam */,
 				5FC71BDB2D92579700EC2EAE /* Fonts */,
 			);
-			name = AppMam;
+			name = Onura;
 			packageProductDependencies = (
 			);
 			productName = AppMam;
-			productReference = 5FC71BCA2D92575400EC2EAE /* AppMam.app */;
+			productReference = 5FC71BCA2D92575400EC2EAE /* Onura.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,14 +98,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					5FC71BC92D92575400EC2EAE = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 5FC71BC52D92575400EC2EAE /* Build configuration list for PBXProject "AppMam" */;
+			buildConfigurationList = 5FC71BC52D92575400EC2EAE /* Build configuration list for PBXProject "Onura" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FC71BC92D92575400EC2EAE /* AppMam */,
+				5FC71BC92D92575400EC2EAE /* Onura */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +180,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 87XUGD6DG8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -243,6 +244,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 87XUGD6DG8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -272,7 +274,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppMam/Preview Content\"";
-				DEVELOPMENT_TEAM = 87XUGD6DG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMam/Info.plist;
@@ -302,7 +303,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppMam/Preview Content\"";
-				DEVELOPMENT_TEAM = 87XUGD6DG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMam/Info.plist;
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5FC71BC52D92575400EC2EAE /* Build configuration list for PBXProject "AppMam" */ = {
+		5FC71BC52D92575400EC2EAE /* Build configuration list for PBXProject "Onura" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5FC71BD62D92575600EC2EAE /* Debug */,
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FC71BD82D92575600EC2EAE /* Build configuration list for PBXNativeTarget "AppMam" */ = {
+		5FC71BD82D92575600EC2EAE /* Build configuration list for PBXNativeTarget "Onura" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5FC71BD92D92575600EC2EAE /* Debug */,

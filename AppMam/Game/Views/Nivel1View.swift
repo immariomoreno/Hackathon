@@ -15,6 +15,8 @@ struct Nivel1View: View {
     @State private var showNewImage = false //Image después de que el popup se quita
    
     var body: some View {
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
         GeometryReader { geometry in
             ZStack {
                 // Fondo
@@ -25,6 +27,18 @@ struct Nivel1View: View {
                 
                 // Personaje
                 Personaje()
+//                    .offset(x:90, y:-10)
+                Image("cubeta-maiz")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:100, height: 100)
+                    .position(CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.8)) //?
+                
+                Image("mesa")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:200, height: 200)
+                    .offset(x:200, y:240)
                 
                 if let firstObject = viewModel.gameObjects.first {
                     Image(firstObject.imageNamePopup)
@@ -51,12 +65,12 @@ struct Nivel1View: View {
                         .position(object.initialPosition)
                 }
                 
-                ForEach(viewModel.gameObjects) { object in
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.yellow.opacity(0.5))
-                        .position(object.targetPosition)
-                }
+//                ForEach(viewModel.gameObjects) { object in
+//                    Circle()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.yellow.opacity(0.5))
+//                        .position(object.targetPosition)
+//                }
                 
                 // Objetos arrastrables
                 ForEach(viewModel.gameObjects) { object in
@@ -113,26 +127,45 @@ struct Nivel1View: View {
                     //                            .cornerRadius(10)
                     //                            .shadow(radius: 5)
                     VStack(spacing: -70) {
-                        if viewModel.gameObjects.count == 1 {
-                            Image("popup1")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 620)
+                        if let currentObject = viewModel.currentObject {
+                            let index = viewModel.gameObjects.firstIndex(where: { $0.id == currentObject.id }) ?? 0
+                            if index == 0 {
+                                Image("popup-metate")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 620)
+                            } else if index == 1 {
+                                Image("popup-machete")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 620)
+                            } else if index == 2 {
+                                Image("popup-ollaa")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 620)
+                            }
                         }
-                        
-                        if viewModel.gameObjects.count == 2 {
-                            Image("popup1")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 620)
-                        }
-                       
-                        if viewModel.gameObjects.count == 3 {
-                            Image("popup1")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 620)
-                        }
+//                        if viewModel.gameObjects.count == 1 {
+//                            Image("popup-metate")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 620)
+//                        }
+//                        
+//                        if viewModel.gameObjects.count == 2 {
+//                            Image("popup-machete")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 620)
+//                        }
+//                       
+//                        if viewModel.gameObjects.count == 3 {
+//                            Image("popup-ollaa")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 620)
+//                        }
                         
                         Button(action: {
                             withAnimation(.easeInOut(duration: 0.5)) {
@@ -157,17 +190,21 @@ struct Nivel1View: View {
                     }
                 }
                 
-                if showNewImage, let newObject = viewModel.currentObject {
-                    Image(newObject.imageNameCheck)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 120, height: 120)
-                        //.position(x: geometry.size.width / 2, y: geometry.size.height * 0.2)
-                        .transition(.scale)
-                }
+//                if showNewImage, let newObject = viewModel.currentObject {
+//                    Image(newObject.imageNameCheck)
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 120, height: 120)
+//                        //.position(x: geometry.size.width / 2, y: geometry.size.height * 0.2)
+//                        .transition(.scale)
+//                }
             }
-            .edgesIgnoringSafeArea(.all)
-        }
+            .onAppear{
+                SoundManager.instance.playSoundLoop(sound: .nivel1)
+            }
+           
+            
+        }.ignoresSafeArea()
         
         // Oculta el botón de regreso predeterminado
                 .navigationBarBackButtonHidden(true)
@@ -177,12 +214,15 @@ struct Nivel1View: View {
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     // Personaliza el label: puedes usar un icono, texto o ambos
-                    HStack {
-                        Image("back-btn")
-                            .resizable()
-                            .frame(width:100, height: 100)
-                            .padding(.top, 80)
-                    }
+//                    HStack {
+//                        Image("back-btn")
+//                            .resizable()
+//                            .frame(width:80, height: 80)
+//                            .padding(.top, 100)
+//                            .padding(.leading, 50)
+//                    }
+//                    .frame(width:80, height: 80)
+//                   
                 })
     }
 }
@@ -190,4 +230,3 @@ struct Nivel1View: View {
 #Preview {
     Nivel1View()
 }
-

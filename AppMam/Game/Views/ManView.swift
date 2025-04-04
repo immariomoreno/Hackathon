@@ -8,39 +8,26 @@
 import SwiftUI
 
 struct ManView: View {
+    @State private var selectedIndex = 0
     var body: some View {
-        NavigationView {
-           NavigationLink("Hi", destination: MyOtherScreen())
-                .position(x:300, y:300)
+        ZStack {
+            RadialGradient(stops: [
+                .init(color: Color(red: 57 / 255, green: 121 / 255, blue: 91 / 255), location: 0.3),
+                .init( color: Color.white, location: 0.3),
+            ], center: .top, startRadius: 600, endRadius: 800)
             
-        }
-        .navigationViewStyle(.stack)
-    }
-}
-
-struct MyOtherScreen: View {
-    var body: some View {
-        ZStack {
-            Color.green.opacity(0.2)
+            VStack {
+                Text("Bienvenido  a AppMam")
+                    .font(.custom("LuckiestGuy-Regular", size: 68))
+                
+//                Spacer()
+            }
+         
         }.ignoresSafeArea()
     }
 }
 
-struct MyOtherScreen2: View {
-    var body: some View {
-        ZStack {
-            Color.blue.opacity(0.2)
-        }.ignoresSafeArea()
-    }
-}
 
-struct MyOtherScreen3: View {
-    var body: some View {
-        ZStack {
-            Color.red.opacity(0.2)
-        }.ignoresSafeArea()
-    }
-}
 
 #Preview {
     ManView()

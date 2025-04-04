@@ -105,8 +105,8 @@ class Nivel1ViewModel: ObservableObject {
                 nameInMam: "KA' METATE",
                 nameInSpanish: "Metate",
                 imageName: "metate",
-                imageNamePopup: "cubeta-maiz",
-                imageNameCheck: "metate-check",
+                imageNamePopup: "popup-metat",
+               // imageNameCheck: "metate-check",
                 description: "ESTE OBJETO ES USADO EN LA ELABORACIÓN DEL NIXTAMAL EL CUAL ES UNO DE LOS PRINCIPALES ALIMENTOS EN LA GASTRONOMÍA MAM.",
                 initialPosition: CGPoint(x: screenWidth * 0.1, y: screenHeight * 0.3),
                 targetPosition: CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.8)
@@ -115,22 +115,22 @@ class Nivel1ViewModel: ObservableObject {
                 nameInMam: "TXUMB'AL",
                 nameInSpanish: "Machete",
                 imageName: "machete",
-                imageNamePopup: "machete",
-                imageNameCheck: "metate-check",
+                imageNamePopup: "popup-machete",
+               // imageNameCheck: "metate-chec",
                 description: "HERRAMIENTA USADA PARA CORTAR VEGETACIÓN O MADERA.",
                 initialPosition: CGPoint(x: screenWidth * 0.1, y: screenHeight * 0.5),
-                targetPosition: CGPoint(x: screenWidth * 0.5, y: screenHeight * 0.6)
+                targetPosition: CGPoint(x: screenWidth * 0.6, y: screenHeight * 0.6)
             ),
            
             GameObject(
                 nameInMam: "K'UM",
                 nameInSpanish: "Olla de Barro",
                 imageName: "ollaBarro",
-                imageNamePopup: "ollaBarro",
-                imageNameCheck: "metate-check",
+                imageNamePopup: "popup-ollaa",
+               // imageNameCheck: "metate-chec",
                 description: "RECIPIENTE PARA COCINAR PLATILLOS TRADICIONALES.",
                 initialPosition: CGPoint(x: screenWidth * 0.1, y: screenHeight * 0.7),
-                targetPosition: CGPoint(x: screenWidth * 0.7, y: screenHeight * 0.8)
+                targetPosition: CGPoint(x: screenWidth * 0.7, y: screenHeight * 0.7)
             )
         ]
     }
@@ -138,9 +138,10 @@ class Nivel1ViewModel: ObservableObject {
     func checkDrop(for object: GameObject, at position: CGPoint) {
         let distance = hypot(position.x - object.targetPosition.x, position.y - object.targetPosition.y)
         if distance < 50 { // Si el objeto está cerca del objetivo
-            popupTitle = object.nameInMam
-            popupSubtitle = object.nameInSpanish
-            popupDescription = object.description
+//            popupTitle = object.nameInMam
+//            popupSubtitle = object.nameInSpanish
+//            popupDescription = object.description
+            currentObject = object // Guardamos el objeto que hizo match
             popupIsVisible = true
         }
     }

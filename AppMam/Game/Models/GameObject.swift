@@ -17,7 +17,7 @@ struct GameObject: Identifiable {
     let nameInSpanish: String
     let imageName: String       // Imagen para arrastrar en la escena
     let imageNamePopup: String  // Imagen que se mostrará en el popup
-    let imageNameCheck: String //Imagen después del popup
+    //let imageNameCheck: String //Imagen después del popup
     let description: String     // Descripción en el popup
 
     // Posiciones
